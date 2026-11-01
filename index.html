@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Спасение кота</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <h1>Спасение кота</h1>
+    <div class="hud">
+      <span>Счёт <b id="score">0</b></span>
+      <span>Ключи <b id="keys">0/3</b></span>
+      <span>Рекорд <b id="best">0</b></span>
+    </div>
+
+    <canvas id="game" width="800" height="450" aria-label="Игровое поле"></canvas>
+
+    <div class="buttons">
+      <button id="start" type="button">Старт</button>
+      <button id="pause" type="button" disabled>Пауза</button>
+      <button id="restart" type="button">Заново</button>
+    </div>
+
+    <div class="touch" id="touch">
+      <div class="dpad">
+        <button type="button" data-action="left" aria-label="Влево">◀</button>
+        <button type="button" data-action="right" aria-label="Вправо">▶</button>
+      </div>
+      <button type="button" data-action="jump" class="jump">Прыжок</button>
+    </div>
+
+    <p class="hint">
+      Бег: ← → или A D. Прыжок: Space или W. Собери три ключа и добеги до клетки.
+      Не падай с крыши и обходи шипы.
+    </p>
+  </main>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
